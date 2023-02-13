@@ -14,8 +14,8 @@ class Person extends Model
         'email'
     ];
 
-    public function peopleDetail(){
-        return $this->hasOne(peopleDetail :: class);
+    public function personDetail(){
+        return $this->hasOne(personDetail :: class);
     }
 
     public function post(){

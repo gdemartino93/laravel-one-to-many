@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
+
+Route::get('/posts' , [MainController :: class , 'posts'])
+    ->name('pages.posts');
+
+    Route::get('/person' , [MainController :: class , 'person'])
+    ->name('pages.person');
