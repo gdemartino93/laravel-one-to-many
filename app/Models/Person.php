@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Person extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'email'
+    ];
+
+    public function peopleDetail(){
+        return $this->hasOne(peopleDetail :: class);
+    }
 }
