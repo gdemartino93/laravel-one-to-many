@@ -17,4 +17,8 @@ class Person extends Model
     public function peopleDetail(){
         return $this->hasOne(peopleDetail :: class);
     }
+
+    public function post(){
+        return $this-> hasOne(post :: class);
+    }
 }
