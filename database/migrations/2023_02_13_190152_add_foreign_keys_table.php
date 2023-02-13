@@ -27,13 +27,13 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('person_detail', function (Blueprint $table) {
-            $table->dropForeign('person_detail_person_id_foreign');
-        });
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropForeign('posts_person_id_foreign');
-        });
-    }
+public function down()
+{
+    // Schema::table('person_detail', function (Blueprint $table) {
+    //     $table->dropForeign('person_detail_person_id_foreign');
+    // });
+    // Schema::table('posts', function (Blueprint $table) {
+    //     $table->dropForeign('posts_person_id_foreign');
+    // });
+}
 };
