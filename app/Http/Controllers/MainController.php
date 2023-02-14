@@ -16,9 +16,10 @@ class MainController extends Controller
         $person = Person :: all();
         return view('pages.posts', compact('posts'), compact('people'));
     }
-    public function person(Person $people){
+    public function person(Person $people, Post $posts){
         $people = Person :: all ();
-        return view('pages.person', compact('people'));
+        $posts = Post :: all();
+        return view('pages.person', compact('people'),compact('posts'));
 
     }
 }
