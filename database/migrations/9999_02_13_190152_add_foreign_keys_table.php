@@ -29,11 +29,14 @@ return new class extends Migration
      */
 public function down()
 {
-    // Schema::table('person_detail', function (Blueprint $table) {
-    //     $table->dropForeign('person_detail_person_id_foreign');
-    // });
-    // Schema::table('posts', function (Blueprint $table) {
-    //     $table->dropForeign('posts_person_id_foreign');
-    // });
+    Schema::table('posts', function (Blueprint $table) {
+        $table->dropForeign('posts_person_id_foreign');
+        $table -> dropColumn('person_id');
+    });
+    Schema::table('person_detail', function (Blueprint $table) {
+        $table->dropForeign('person_detail_person_id_foreign');
+        $table -> dropColumn('person_id');
+    });
+
 }
 };
