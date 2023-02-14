@@ -19,6 +19,6 @@ class Person extends Model
     }
 
     public function post(){
-        return $this-> hasOne(post :: class);
+        return $this-> hasMany(Post :: class);
     }
 }
